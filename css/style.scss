@@ -5,155 +5,90 @@ html {
     font-size: 18px;
 }
 body {
-    max-width: 100%;
+    max-width: 1440px;
     min-height: 100vh;
+    font-family: "Glory";
     background: $bckSite;
 }
 .container {
-    padding: 0 calc(50% - 685px);
+    padding: 0 calc(50% - 470px);
 }
 @import "_mod.scss"; // классы модификаторы
-.btn {
-    display: block;
-    font-size: $fz-BTN;
-    font-weight: $fw-BTN;
-    line-height: $lh-BTN;
-    padding: $padTB-BTN $padLR-BTN;
-    border: 1px solid #000;
-    background: $bcg-BTN;
-    color: $colorText-BTN;
-}
+
 //-------------------------------------------
 
 .header {
     width: 100%;
-    height: 90px;
-    background: #030303;
-    .menu {
+
+    .header__navigation {
         width: 100%;
-        height: 100%;
-        margin: 0 auto;
+        margin-top: 31px;
+        border-bottom: 1px solid #828282;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+    .header__menu {
+        margin-bottom: 31px;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        &__list {
-            display: flex;
-            margin-top: 20px;
-            gap: 20px;
-        }
-        &__items {
-        }
-        &__links {
-            background-color: antiquewhite;
+        justify-content: space-between;
+    }
+    .header__list {
+        > a {
+            color: rgba(130, 130, 130, 1);
         }
     }
 }
 .main {
     width: 100%;
-    min-height: 100vh;
-    background: #fafafa;
-    .title {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        font-size: 55px;
-        line-height: 2.2;
-        color: rgb(253, 253, 253);
-        text-shadow: 0 0 5px #000;
-        span {
-            color: rgb(219, 243, 0);
+    .aboutMe {
+        .aboutMe__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-    }
-    .less1 {
-        &__container {
+        .aboutMe__name {
+            width: 124px;
+            font-size: 2.6rem;
+            color: #070707;
+            margin-top: 40px;
         }
-        &__title {
+        .aboutMe__iFrom {
+            font-size: 1rem;
+            line-height: 1.2rem;
+            color: #070707;
+            align-self: flex-end;
         }
-        &__content {
-            width: 550px;
-            margin-top: 20px;
-            &:first-child {
-                margin-top: 60px;
+        .aboutMy__langth {
+            font-size: 0.9rem;
+            line-height: 1.1rem;
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+        }
+        .aboutMe__pic {
+            margin-top: 49px;
+        }
+        .aboutMe__photo {
+        }
+        .aboutMe__text {
+            width: 100%;
+            margin-top: 104px;
+            padding: 120px 0 107px 0;
+            background: #f6f6f6;
+            h2,
+            p {
+                width: 485px;
+                margin: 0 auto;
+                
+                text-align: center;
             }
-        }
-        &__modal {
-            &:hover {
-                cursor: pointer;
-                box-shadow: 0 0 3px 1px #030303;
-                color: #d1d408;
-                transition: 2s;
+            h2{
+                font-size: 1.9rem;
+                line-height: 2.3rem;
+            }
+            p{
+                margin-top: 17px;
             }
         }
     }
 }
 .footer {
-}
-
-.modal__container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #030303de;
-    overflow: hidden;
-    z-index: 10;
-    #modal {
-        min-width: 300px;
-        max-width: 600px;
-        height: 400px;
-        padding: 60px 30px;
-        background: #fafafa;
-        overflow: hidden;
-        z-index: 110;
-    }
-    .modal__close {
-        width: 3%;
-        display: flex;
-        justify-content: center;
-        height: fit-content;
-        border: 1px solid #000;
-        color:rgb(190, 5, 5);
-        font-weight: 800;
-        &:hover{
-            cursor: pointer;
-            box-shadow: 0 0 3px 0 #030303;
-            background: #00ff153a;
-        }
-        
-    }
-    &__content {
-    }
-    .title {
-    }
-    .text {
-    }
-    .molal__btn{
-        margin: 50px auto;
-        border-radius: 10px;
-    }
-    .btn {
-    }
-
-}
-
-.red {
-    background: rgb(161, 11, 11);
-    font-weight: 700;
-    color: aliceblue;
-}
-
-.yellow {
-    background: rgb(218, 241, 7);
-    font-weight: 700;
-    color: black;
-}
-
-.white {
-    background: rgb(255, 255, 255);
-    font-weight: 700;
-    color: black;
 }

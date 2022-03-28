@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css?family=Glory:100,200,300,regular,500,600,700,800,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic"
+        rel="stylesheet" />
+
+
     <link rel="stylesheet" href="./css/style.css">
     <title>less 1</title>
 </head>
@@ -13,52 +18,60 @@
     <!-- ------header------- -->
     <header class="header">
         <div class="container">
-            <section class="menu">
-                <ul class="menu__list">
-                    <li class="menu__items"><a href="./index.html" class="menu__links btn">Home</a></li>
-                    <li class="menu__items"><a href="#" class="menu__links btn">Video</a></li>
-                    <li class="menu__items"><a href="#" class="menu__links btn">Documents</a></li>
-                    <li class="menu__items"><a href="#" class="menu__links btn">Control</a></li>
+            <nav class="header__navigation">
+                <ul class="header__menu">
+                    <li class="header__list"><a href="#">Home</a></li>
+                    <li class="header__list"><a href="#">About me</a></li>
+                    <li class="header__list"><a href="#">Skills</a></li>
+                    <li class="header__list"><a href="#">Portfolio</a></li>
+                    <li class="header__list"><a href="#">Contacts</a></li>
                 </ul>
-            </section>
+            </nav>
         </div>
     </header>
 
 
     <!-- ------main------- -->
     <main class="main">
-        <section class="title">
-            <h2>Практический <span>JS</span></h2>
-        </section>
-        <section class="less less1">
-            <div class="less__container">
-                <h2 class="less1__title title">JS Модальное окно</h2>
-                <p class="less1__content">Модальное окно создаём с позиционированием абсолют, в контейнере с затемнённым
-                    бэкграундом вызываемый по кнопке 'модалка' и закрываемый по крестику в модальном окне.</p>
-                <p class="less1__content text">html модального окна записан в конце блока 'main' и отстилизован в css.
-                </p>
-                <button class="less1__modal btn red">Модалка</a>
-
-            </div>
-        </section>
-        <section class="less less2 mt30">
-            <div class="less__container">
-
-            </div>
-        </section>
-
-        <div class="modal__container">
-            <div id="modal">
-                <div class="modal__close">x</div>
-                <div class="modal__content">
-                    <h3 class="title">"Это модалка</h3>
-                    <p class="text">Модалка на JS. Сделанна с затемнёным фоном и по середине окна.</p>
-                    <p class="text">Контейнер модалки отпозиционированн как absolute , а само модальное окно
-                        отцентрированно адексом.</p>
+        <div class="container">
+            <section class="aboutMe">
+                <div class="aboutMe__content">
+                    <div class="aboutMe__name">
+                        <h1>Denis Novak</h1>
+                    </div>
+                    <div class="aboutMe__iFrom">
+                        <p>UX|UI desiner</p>
+                        <p>24 years old, Minsk</p>
+                    </div>
+                    <div class="aboutMy__langth">
+                        <p>RU|ENG</p>
+                    </div>
                 </div>
-                <button class="modal__close molal__btn btn">Закрыть</button>
-            </div>
+                <div class="aboutMe__pic">
+                    <img src="./img/prew/foto.png" alt="foto" class="aboutMe__photo">
+                </div>
+                <div class="aboutMe__text">
+                    <h2>About me</h2>
+                    <p>
+                        Hi, I'm Denis – UX/UI designer from Minsk.<br />
+                        I'm
+                        interested in design and everything connected with it.</p>
+                        <br />
+                        <br />
+                    <p>I'm studying at courses "Web and mobile design
+                        interfaces" in IT-Academy.
+                    </p>
+                    <br />
+                    <br />
+                    <p>А
+                        Ready to implement excellent projects <br />
+                        with wonderful people.
+                    </p>
+                </div>
+            </section>
         </div>
+
+
 
     </main>
 

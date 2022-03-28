@@ -92,13 +92,14 @@ html {
 }
 
 body {
-  max-width: 100%;
+  max-width: 1440px;
   min-height: 100vh;
+  font-family: "Glory";
   background: #fff;
 }
 
 .container {
-  padding: 0 calc(50% - 685px);
+  padding: 0 calc(50% - 470px);
 }
 
 .title {
@@ -140,164 +141,96 @@ body {
   outline: 1px solid #000;
 }
 
-.btn {
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 500;
-  line-height: 1.2;
-  padding: 10px 35px;
-  border: 1px solid #000;
-  background: #f7f7f7;
-  color: rgba(37, 37, 37, 0.849);
-}
-
 .header {
   width: 100%;
-  height: 90px;
-  background: #030303;
 }
 
-.header .menu {
+.header .header__navigation {
   width: 100%;
-  height: 100%;
-  margin: 0 auto;
+  margin-top: 31px;
+  border-bottom: 1px solid #828282;
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+          transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.header .header__menu {
+  margin-bottom: 31px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.header .menu__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 20px;
-  gap: 20px;
-}
-
-.header .menu__links {
-  background-color: antiquewhite;
+.header .header__list > a {
+  color: #828282;
 }
 
 .main {
   width: 100%;
-  min-height: 100vh;
-  background: #fafafa;
 }
 
-.main .title {
-  width: 100%;
+.main .aboutMe .aboutMe__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 55px;
-  line-height: 2.2;
-  color: #fdfdfd;
-  text-shadow: 0 0 5px #000;
-}
-
-.main .title span {
-  color: #dbf300;
-}
-
-.main .less1__content {
-  width: 550px;
-  margin-top: 20px;
-}
-
-.main .less1__content:first-child {
-  margin-top: 60px;
-}
-
-.main .less1__modal:hover {
-  cursor: pointer;
-  -webkit-box-shadow: 0 0 3px 1px #030303;
-          box-shadow: 0 0 3px 1px #030303;
-  color: #d1d408;
-  -webkit-transition: 2s;
-  transition: 2s;
-}
-
-.modal__container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #030303de;
-  overflow: hidden;
-  z-index: 10;
 }
 
-.modal__container #modal {
-  min-width: 300px;
-  max-width: 600px;
-  height: 400px;
-  padding: 60px 30px;
-  background: #fafafa;
-  overflow: hidden;
-  z-index: 110;
+.main .aboutMe .aboutMe__name {
+  width: 124px;
+  font-size: 2.6rem;
+  color: #070707;
+  margin-top: 40px;
 }
 
-.modal__container .modal__close {
-  width: 3%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  border: 1px solid #000;
-  color: #be0505;
-  font-weight: 800;
+.main .aboutMe .aboutMe__iFrom {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #070707;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
-.modal__container .modal__close:hover {
-  cursor: pointer;
-  -webkit-box-shadow: 0 0 3px 0 #030303;
-          box-shadow: 0 0 3px 0 #030303;
-  background: #00ff153a;
+.main .aboutMe .aboutMy__langth {
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
-.modal__container .molal__btn {
-  margin: 50px auto;
-  border-radius: 10px;
+.main .aboutMe .aboutMe__pic {
+  margin-top: 49px;
 }
 
-.red {
-  background: #a10b0b;
-  font-weight: 700;
-  color: aliceblue;
+.main .aboutMe .aboutMe__text {
+  width: 100%;
+  margin-top: 104px;
+  padding: 120px 0 107px 0;
+  background: #f6f6f6;
 }
 
-.yellow {
-  background: #daf107;
-  font-weight: 700;
-  color: black;
+.main .aboutMe .aboutMe__text h2,
+.main .aboutMe .aboutMe__text p {
+  width: 485px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.white {
-  background: white;
-  font-weight: 700;
-  color: black;
+.main .aboutMe .aboutMe__text h2 {
+  font-size: 1.9rem;
+  line-height: 2.3rem;
+}
+
+.main .aboutMe .aboutMe__text p {
+  margin-top: 17px;
 }
