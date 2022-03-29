@@ -13,6 +13,14 @@ body {
 .container {
     padding: 0 calc(50% - 470px);
 }
+
+.centerEl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 @import "_mod.scss"; // классы модификаторы
 
 //-------------------------------------------
@@ -65,6 +73,9 @@ body {
         }
         .aboutMe__pic {
             margin-top: 49px;
+            img{
+                width: 100%;
+            }
         }
         .aboutMe__photo {
         }
@@ -75,20 +86,112 @@ body {
             background: #f6f6f6;
             h2,
             p {
-                width: 485px;
+                max-width: 485px;
                 margin: 0 auto;
-                
+
                 text-align: center;
             }
-            h2{
+            h2 {
                 font-size: 1.9rem;
                 line-height: 2.3rem;
             }
-            p{
+            p {
                 margin-top: 17px;
             }
         }
     }
+
+    .skills {
+        background: #ffffff;
+        .skills__title {
+            text-align: center;
+            margin-top: 90px;
+            font-size: 1.8rem;
+            line-height: 2.3erm;
+        }
+        .scills__text {
+            margin: 69px;
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+            text-align: center;
+        }
+
+        .skills__cards {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 82px;
+            img {
+                display: block;
+            }
+        }
+
+        .skills__card {
+            width: 166px;
+        }
+        .skills__image {
+            img {
+               
+                margin: 0 auto;
+            }
+        }
+        .skills__description {
+            width: 70px;
+            margin: 28px auto 0 auto;
+            font-size: 0.8rem;
+            line-height: 0.9rem;
+            text-align: center;
+        }
+        .skills__stars {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            margin-bottom: 111px;
+        }
+    }
+
+    .portfolio {
+        width: 100%;
+        background: #f6f6f6;
+        .portfolio__title {
+            font-size: 1.9rem;
+            line-height: 2.3rem;
+            padding-top: 112px;
+            padding-bottom: 97px;
+        }
+        .portfolio__work {
+            margin: 0 auto;
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+        & .portfolio__work:not(:nth-child(1n)) {
+            margin-top: 99px;
+        }
+        & .portfolio__work:first-child{
+            margin-top: 74px;
+        }
+        .portfolio__work-title {
+            margin-top: 45px;
+            font-size: 1rem;
+            line-height: 2.3;
+            color: #070707;
+        }
+    }
 }
 .footer {
+}
+
+
+@media (max-width: 780px) { 
+    .skills__cards{
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    
 }

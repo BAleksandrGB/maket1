@@ -21,6 +21,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 
 body {
   line-height: 1;
+  margin: 0 auto;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -100,6 +101,18 @@ body {
 
 .container {
   padding: 0 calc(50% - 470px);
+}
+
+.centerEl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .title {
@@ -212,6 +225,10 @@ body {
   margin-top: 49px;
 }
 
+.main .aboutMe .aboutMe__pic img {
+  width: 100%;
+}
+
 .main .aboutMe .aboutMe__text {
   width: 100%;
   margin-top: 104px;
@@ -221,7 +238,7 @@ body {
 
 .main .aboutMe .aboutMe__text h2,
 .main .aboutMe .aboutMe__text p {
-  width: 485px;
+  max-width: 485px;
   margin: 0 auto;
   text-align: center;
 }
@@ -233,4 +250,120 @@ body {
 
 .main .aboutMe .aboutMe__text p {
   margin-top: 17px;
+}
+
+.main .skills {
+  background: #ffffff;
+}
+
+.main .skills .skills__title {
+  text-align: center;
+  margin-top: 90px;
+  font-size: 1.8rem;
+  line-height: 2.3erm;
+}
+
+.main .skills .scills__text {
+  margin: 69px;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  text-align: center;
+}
+
+.main .skills .skills__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 82px;
+}
+
+.main .skills .skills__cards img {
+  display: block;
+}
+
+.main .skills .skills__card {
+  width: 166px;
+}
+
+.main .skills .skills__image img {
+  margin: 0 auto;
+}
+
+.main .skills .skills__description {
+  width: 70px;
+  margin: 28px auto 0 auto;
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  text-align: center;
+}
+
+.main .skills .skills__stars {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 111px;
+}
+
+.main .portfolio {
+  width: 100%;
+  background: #f6f6f6;
+}
+
+.main .portfolio .portfolio__title {
+  font-size: 1.9rem;
+  line-height: 2.3rem;
+  padding-top: 112px;
+  padding-bottom: 97px;
+}
+
+.main .portfolio .portfolio__work {
+  margin: 0 auto;
+}
+
+.main .portfolio .portfolio__work img {
+  width: 100%;
+  display: block;
+}
+
+.main .portfolio .portfolio__work:not(:nth-child(1n)) {
+  margin-top: 99px;
+}
+
+.main .portfolio .portfolio__work:first-child {
+  margin-top: 74px;
+}
+
+.main .portfolio .portfolio__work-title {
+  margin-top: 45px;
+  font-size: 1rem;
+  line-height: 2.3;
+  color: #070707;
+}
+
+@media (max-width: 780px) {
+  .skills__cards {
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
+  }
 }
