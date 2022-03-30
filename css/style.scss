@@ -5,7 +5,7 @@ html {
     font-size: 18px;
 }
 body {
-    max-width: 1440px;
+    /* max-width: 1440px; */
     min-height: 100vh;
     font-family: "Glory";
     background: $bckSite;
@@ -19,7 +19,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 
 @import "_mod.scss"; // классы модификаторы
 
@@ -46,8 +45,11 @@ body {
     }
 }
 .main {
-    width: 100%;
+    min-width: 100%;
     .aboutMe {
+        
+        animation-name: animAbout;
+        transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         .aboutMe__content {
             display: flex;
             justify-content: space-between;
@@ -73,16 +75,23 @@ body {
         }
         .aboutMe__pic {
             margin-top: 49px;
-            img{
+            img {
                 width: 100%;
             }
+
+            .aboutMe__photo-mobile {
+            }
+        }
+        .aboutMe__photo-mobile {
+            display: none;
         }
         .aboutMe__photo {
         }
         .aboutMe__text {
-            width: 100%;
+            
             margin-top: 104px;
             padding: 120px 0 107px 0;
+            
             background: #f6f6f6;
             h2,
             p {
@@ -130,7 +139,6 @@ body {
         }
         .skills__image {
             img {
-               
                 margin: 0 auto;
             }
         }
@@ -169,7 +177,7 @@ body {
         & .portfolio__work:not(:nth-child(1n)) {
             margin-top: 99px;
         }
-        & .portfolio__work:first-child{
+        & .portfolio__work:first-child {
             margin-top: 74px;
         }
         .portfolio__work-title {
@@ -179,13 +187,74 @@ body {
             color: #070707;
         }
     }
+
+    .contacts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        .contacts__title {
+            margin-top: 114px;
+            font-size: 1.6rem;
+            line-height: 2.3;
+            text-align: center;
+        }
+        .contacts__text {
+            max-width: 275px;
+            margin-top: 20px;
+            font-size: 1rem;
+            line-height: 1.1rem;
+            text-align: center;
+        }
+        .contacts__btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 20px;
+            margin: 0 auto;
+            margin-top: 30px;
+            padding: 8px 30px;
+            font-size: 0.8rem;
+            line-height: 1.2rem;
+            color: #ffffff;
+            background: #070707;
+        }
+        .contacts__social {
+            display: flex;
+            margin-top: 86px;
+
+            .contacts_social-icon:not(:last-child) {
+                margin-right: 61px;
+            }
+        }
+    }
 }
 .footer {
+    width: 100%;
+    margin-top: 85px;
+    text-align: center;
+    p {
+        max-width: 243px;
+        font-size: 0.7rem;
+        line-height: 0.8rem;
+        margin-bottom: 123px;
+    }
 }
 
+@media (max-width: 780px) {
+    body {
+        padding: 0 30px;
+    }
+    .aboutMe__photo {
+        display: none;
+    }
+    .main .aboutMe .aboutMe__photo-mobile {
+        display: block;
+    }
 
-@media (max-width: 780px) { 
-    .skills__cards{
+    .skills__cards {
         max-width: 100%;
         display: flex;
         justify-content: center;
@@ -193,5 +262,30 @@ body {
         flex-direction: column;
         margin: 0 auto;
     }
-    
+}
+
+@keyframes animAbout {
+}
+
+@media (max-width: 376px) {
+    body {
+        padding: 0 30px;
+    }
+
+    .aboutMe__content {
+        flex-direction: column;
+        justify-content: center;
+        img{
+            margin-top: 26px;
+        }
+    }
+    .aboutMe__content.container > div.aboutMe__iFrom {
+        margin-top: 23px;
+      
+        align-self: center;
+    }
+
+    .aboutMy__langth {
+        display: none;
+    }
 }

@@ -9,7 +9,75 @@
   list-style: none;
 }
 
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -24,7 +92,17 @@ body {
   margin: 0 auto;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -32,11 +110,15 @@ nav ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: none;
 }
 
@@ -65,7 +147,8 @@ del {
   text-decoration: line-through;
 }
 
-abbr[title], dfn[title] {
+abbr[title],
+dfn[title] {
   border-bottom: 1px dotted;
   cursor: help;
 }
@@ -84,7 +167,8 @@ hr {
   padding: 0;
 }
 
-input, select {
+input,
+select {
   vertical-align: middle;
 }
 
@@ -93,7 +177,7 @@ html {
 }
 
 body {
-  max-width: 1440px;
+  /* max-width: 1440px; */
   min-height: 100vh;
   font-family: "Glory";
   background: #fff;
@@ -181,7 +265,14 @@ body {
 }
 
 .main {
-  width: 100%;
+  min-width: 100%;
+}
+
+.main .aboutMe {
+  -webkit-animation-name: animAbout;
+          animation-name: animAbout;
+  -webkit-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .main .aboutMe .aboutMe__content {
@@ -229,8 +320,11 @@ body {
   width: 100%;
 }
 
+.main .aboutMe .aboutMe__photo-mobile {
+  display: none;
+}
+
 .main .aboutMe .aboutMe__text {
-  width: 100%;
   margin-top: 104px;
   padding: 120px 0 107px 0;
   background: #f6f6f6;
@@ -348,7 +442,93 @@ body {
   color: #070707;
 }
 
+.main .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.main .contacts .contacts__title {
+  margin-top: 114px;
+  font-size: 1.6rem;
+  line-height: 2.3;
+  text-align: center;
+}
+
+.main .contacts .contacts__text {
+  max-width: 275px;
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  text-align: center;
+}
+
+.main .contacts .contacts__btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 8px 30px;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  color: #ffffff;
+  background: #070707;
+}
+
+.main .contacts .contacts__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 86px;
+}
+
+.main .contacts .contacts__social .contacts_social-icon:not(:last-child) {
+  margin-right: 61px;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 85px;
+  text-align: center;
+}
+
+.footer p {
+  max-width: 243px;
+  font-size: 0.7rem;
+  line-height: 0.8rem;
+  margin-bottom: 123px;
+}
+
 @media (max-width: 780px) {
+  body {
+    padding: 0 30px;
+  }
+  .aboutMe__photo {
+    display: none;
+  }
+  .main .aboutMe .aboutMe__photo-mobile {
+    display: block;
+  }
   .skills__cards {
     max-width: 100%;
     display: -webkit-box;
@@ -365,5 +545,34 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 0 auto;
+  }
+}
+
+@-webkit-keyframes animAbout {}
+
+@keyframes animAbout {}@media (max-width: 376px) {
+  body {
+    padding: 0 30px;
+  }
+  .aboutMe__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .aboutMe__content img {
+    margin-top: 26px;
+  }
+  .aboutMe__content.container > div.aboutMe__iFrom {
+    margin-top: 23px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .aboutMy__langth {
+    display: none;
   }
 }
